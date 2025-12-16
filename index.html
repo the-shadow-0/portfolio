@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Noureddine BENMANSER — Strategic Marketing, Content & Luxe Growth</title>
+  <meta name="description"
+    content="I’m Noureddine BENMANSER, a strategic marketer specialising in brand positioning, content systems, luxe marketing, and international growth. I combine creative craft with data to scale revenue." />
+  <meta property="og:title" content="Noureddine BENMANSER — Strategic Marketing & Content" />
+  <meta property="og:description"
+    content="Strategic marketing: content strategy, brand positioning, SEO, SMM, email automation, luxe and international GTM." />
+
+  <meta name="theme-color" content="#F7F8FA">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;900&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* Refined, brighter theme — added subtle decorative accents and gradients for a premium feel */
+    :root {
+      --bg: #F7F8FA;
+      --card: #FFFFFF;
+      --text: #0C0F14;
+      --muted: #596073;
+      --accent1: #00C9B1;
+      --accent2: #FF4DA6;
+      --accent3: #FFB84D;
+      --glass: rgba(255, 255, 255, 0.94);
+      --maxW: 1200px;
+      --radius: 20px;
+      --ease: cubic-bezier(.17, .84, .44, 1);
+      --shadow-1: 0 10px 30px rgba(17, 24, 39, 0.06);
+      --shadow-2: 0 18px 50px rgba(17, 24, 39, 0.08);
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+      color: var(--text);
+      background: radial-gradient(900px 380px at 6% 10%, rgba(0, 201, 177, 0.035), transparent 8%), var(--bg);
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      color: var(--accent1);
+      text-decoration: none
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.72));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(14, 17, 20, 0.04);
+      z-index: 40
+    }
+
+    .nav {
+      max-width: var(--maxW);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-family: Space Grotesk, sans-serif
+    }
+
+    .mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
+      display: inline-block
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    main {
+      max-width: var(--maxW);
+      margin: 28px auto;
+      padding: 20px;
+      display: grid;
+      gap: 28px
+    }
+
+
+    .hero {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 36px;
+      align-items: center
+    }
+
+    .portrait-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 250, 251, 0.98));
+      border-radius: 22px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-2);
+      position: relative
+    }
+
+    .portrait {
+      width: 380px;
+      height: 520px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .duo-halo {
+      position: absolute;
+      inset: -6px;
+      border-radius: 18px;
+      pointer-events: none;
+      background: radial-gradient(480px 260px at 10% 10%, rgba(0, 201, 177, 0.09), transparent 18%, rgba(255, 77, 166, 0.07) 40%, transparent)
+    }
+
+    .portrait .outline {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      border-radius: 12px;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      mix-blend-mode: overlay
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.995), rgba(250, 250, 251, 0.995));
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: var(--shadow-2);
+      position: relative;
+      overflow: visible
+    }
+
+    .hero-accent {
+      position: absolute;
+      left: -40px;
+      top: -40px;
+      width: 220px;
+      height: 220px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(0, 201, 177, 0.08), rgba(255, 77, 166, 0.06));
+      filter: blur(28px);
+      transform: rotate(-12deg);
+      z-index: 0
+    }
+
+    h1 {
+      font-family: Space Grotesk, sans-serif;
+      font-size: clamp(30px, 4.8vw, 48px);
+      margin: 0 0 12px;
+      line-height: 1.02;
+      position: relative;
+      z-index: 10
+    }
+
+    .kinetic {
+      display: inline-block;
+      position: relative
+    }
+
+    .kinetic .word {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-weight: 700;
+      position: relative
+    }
+
+    .kinetic .underline {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 8px;
+      bottom: -6px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent1));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .44s var(--ease);
+      opacity: 0.18
+    }
+
+    .kinetic.animate .underline {
+      transform: scaleX(1);
+      opacity: 1
+    }
+
+    p.lead {
+      margin: 8px 0 18px;
+      color: var(--muted);
+      max-width: 64ch;
+      position: relative;
+      z-index: 10
+    }
+
+    .ctas {
+      display: flex;
+      gap: 12px
+    }
+
+    .btn {
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: transform .16s var(--ease), box-shadow .16s
+    }
+
+    .primary {
+      background: linear-gradient(90deg, var(--accent1), #22e0c0);
+      color: #061018;
+      box-shadow: 0 12px 30px rgba(0, 201, 177, 0.08)
+    }
+
+    .secondary {
+      background: transparent;
+      border: 1px solid rgba(9, 11, 13, 0.06);
+      color: var(--text)
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: var(--shadow-1);
+      transition: transform .18s var(--ease), box-shadow .18s
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 64px rgba(17, 24, 39, 0.10);
+      border: 1px solid rgba(255, 77, 166, 0.06)
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent2), var(--accent1));
+      color: white;
+      font-weight: 700
+    }
+
+    .marketing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px
+    }
+
+    .marketing-card {
+      padding: 20px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.995), rgba(250, 250, 251, 0.995));
+      box-shadow: var(--shadow-1)
+    }
+
+    .value {
+      font-weight: 700;
+      color: var(--text)
+    }
+
+    ul {
+      margin: 8px 0 0 18px;
+      color: var(--muted)
+    }
+
+    .toast {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      color: #061018;
+      padding: 12px 16px;
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      display: none;
+      z-index: 400
+    }
+
+    footer {
+      padding: 28px 20px;
+      border-top: 1px solid rgba(9, 11, 13, 0.04);
+      background: transparent
+    }
+
+    @media (max-width:980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(1, 1fr)
+      }
+
+      .marketing-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    :focus {
+      outline: none
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(0, 201, 177, 0.14);
+      outline-offset: 3px
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+
+        <div>Noureddine BENMANSER</div>
+      </div>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+
+      <aside class="portrait-card" aria-hidden="true">
+        <div class="portrait">
+          <img src="25066487.jpeg" alt="Portrait of Noureddine BENMANSER — digital marketer" loading="lazy">
+          <div class="duo-halo" aria-hidden="true"></div>
+          <div class="outline" aria-hidden="true"></div>
+        </div>
+      </aside>
+
+      <div class="hero-card">
+        <div class="hero-accent" aria-hidden="true"></div>
+        <h1>
+          <span class="kinetic animate" aria-hidden="true">
+            <span class="word" id="kinetic-word">Traffic that converts.</span>
+            <span class="underline" aria-hidden="true"></span>
+          </span>
+        </h1>
+
+        <p class="lead">I’m <strong>Noureddine BENMANSER</strong> — strategic marketer focused on <strong>brand
+            positioning</strong>, <strong>content strategy</strong>, <strong>luxe & premium marketing</strong>, and
+          <strong>international go-to-market</strong>. I blend storytelling, design, and rigorous analytics (SEO, SMM,
+          email automation, CRO) to create high-value, measurable growth.
+        </p>
+
+        <div class="ctas">
+          <a class="btn primary" href="#contact" id="cta-work">Work with me</a>
+          <a class="btn secondary" href="#work">See case studies</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div class="pill">
+            <p align="center"> Trusted <br> Measurable <br> Private</p>
+          </div>
+
+          <div class="muted">Clients: startups, boutique brands, premium houses and international ventures.</div>
+        </div>
+
+        <div style="margin-top:20px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+          <div class="card">
+            <div class="value">Worked at GlobalTruth</div>
+            <div class="muted">Delivered projects across one SaaS platform and three e‑commerce stores while at
+              GlobalTruth.</div>
+          </div>
+          <div class="card">
+            <div class="value">ROAS ×3</div>
+            <div class="muted">E‑commerce ad scale (90 days)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="services">
+      <div class="section-title">
+        <h2>Services</h2>
+        <div style="margin-left:auto" class="muted">Clear deliverables & pricing tiers available</div>
+      </div>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="card">
+          <h3>Strategic Marketing & GTM</h3>
+          <p class="muted">Market segmentation, positioning, messaging frameworks, and launch playbooks for new markets.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Brand & Luxe Positioning</h3>
+          <p class="muted">Premium brand systems, editorial storytelling, scarcity-driven campaigns, and customer
+            experience design.</p>
+        </div>
+        <div class="card">
+          <h3>Content & Performance</h3>
+          <p class="muted">Pillar-cluster strategy, creative velocity for paid/social, SEO-optimized long-form, and CRO
+            for landing pages.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="work">
+      <div style="display:flex;align-items:center;gap:12px">
+        <h2>Selected Case Studies</h2>
+        <div class="muted">Metric-forward storytelling</div>
+      </div>
+      <div style="margin-top:12px" class="grid-3">
+        <article class="card">
+          <h3>GlobalTruth — Platform & Retail Projects</h3>
+          <p class="muted">Worked on one SaaS platform and three e‑commerce projects while at GlobalTruth: strategy,
+            content systems, and paid scaling.</p>
+        </article>
+        <article class="card">
+          <img src="assets/img/case-study-2-thumb.webp" alt="Ecommerce case study"
+            style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+          <h3>E‑commerce Ad Scale</h3>
+          <p class="muted">Outcome: ROAS ×3 in 90 days. Strategy: creative rotation, audience layering and dynamic
+            product ads.</p>
+        </article>
+        <article class="card">
+          <img src="assets/img/case-study-3-thumb.webp" alt="Luxe brand case study"
+            style="width:100%;height:160px;object-fit:cover;border-radius:8px">
+          <h3>Luxe Brand: Direct-to-Client</h3>
+          <p class="muted">Outcome: Premium conversion funnel and LTV uplift via editorial experiences and exclusive
+            offers.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section id="expertise">
+      <div style="display:flex;align-items:center;gap:12px">
+        <h2>Expertise — where I deliver value</h2>
+        <div class="muted">Strategic, creative and measurable</div>
+      </div>
+      <div class="marketing-grid" style="margin-top:14px">
+        <div class="marketing-card">
+          <h3>Luxe & Premium Marketing</h3>
+          <p class="muted">Positioning premium offers requires control over perception, scarcity cues, and elevated
+            experiences. I craft brand narratives and conversion paths that protect margin and increase lifetime value.
+          </p>
+          <ul>
+            <li><strong>Brand architecture & naming:</strong> luxury positioning, brand voice, and story arcs.</li>
+            <li><strong>High-production content:</strong> cinematic hero videos, rich editorial, lookbooks and heritage
+              storytelling.</li>
+            <li><strong>Selective distribution:</strong> invite-only launches, private lists, concierge funnels, and
+              PR-led amplification.</li>
+            <li><strong>Keywords & SEO:</strong> "luxury [category]","bespoke [service]", "artisan [product]", and
+              editorial authority to capture high-intent affluent searches.</li>
+          </ul>
+          <p style="margin-top:8px"><em>Value:</em> higher ASP, deeper retention, defensible pricing and an elevated
+            brand premium.</p>
+        </div>
+
+        <div class="marketing-card">
+          <h3>Content Marketing (Content-First)</h3>
+          <p class="muted">Content-first strategies build authority and reduce reliance on paid channels. I design
+            content ecosystems that amplify SEO, SMM, email, and paid creative.</p>
+          <ul>
+            <li><strong>Pillar & cluster systems:</strong> topical authority, internal linking, and conversion-focused
+              CTAs.</li>
+            <li><strong>Content to conversion:</strong> gated assets, ROI calculators, case narratives and product-story
+              funnels.</li>
+            <li><strong>Repurposing pipeline:</strong> long-form → short video → social slices → email sequences → paid
+              creatives.</li>
+            <li><strong>Keywords & intent:</strong> topic clusters, long-tail product-intent phrases, "how to" guides,
+              and buyer-stage queries.</li>
+          </ul>
+          <p style="margin-top:8px"><em>Value:</em> compounding organic growth, better lead quality, and sustained
+            channel efficiency improvements.</p>
+        </div>
+
+        <div class="marketing-card">
+          <h3>SEO — Technical & Editorial</h3>
+          <p class="muted">Combine engineering and editorial signals to win search: speed, structure, schema, and
+            content that answers intent. I aim for featured snippets, content hubs, and high-ROI landing pages.</p>
+          <ul>
+            <li><strong>Technical SEO:</strong> Core Web Vitals, structured data (Article, FAQ, Product),
+              canonicalization, mobile-first index readiness.</li>
+            <li><strong>Editorial SEO:</strong> intent mapping, content pruning, SERP-feature targeting and E-E-A-T
+              signals.</li>
+            <li><strong>Keywords:</strong> priority commercial terms, long-tail transactional queries, and
+              local/international variants.</li>
+          </ul>
+          <p style="margin-top:8px"><em>Value:</em> durable, high-intent traffic and predictable acquisition at scale.
+          </p>
+        </div>
+
+        <div class="marketing-card">
+          <h3>SMM — Creative & Distribution</h3>
+          <p class="muted">Social is the laboratory for messaging and creative. I run rapid creative experiments and
+            scale winners into paid channels and influencer partnerships.</p>
+          <ul>
+            <li><strong>Creative velocity:</strong> short-form video, carousel tests, hooks & thumbnail optimization.
+            </li>
+            <li><strong>Audience layering:</strong> lookalikes, interest-based clusters, LTV-based retargeting.</li>
+            <li><strong>Influencer & UGC:</strong> micro-influencer seeding, authenticity frameworks, performance T&Cs.
+            </li>
+          </ul>
+          <p style="margin-top:8px"><em>Value:</em> lower CPMs, higher CTRs for paid, and stronger organic momentum.</p>
+        </div>
+
+        <div class="marketing-card">
+          <h3>Email Marketing — Lifecycle & Monetization</h3>
+          <p class="muted">Email is the highest-LTV owned channel when done correctly. I build segmented lifecycles,
+            winback flows, and product-led onboarding journeys.</p>
+          <ul>
+            <li><strong>Lifecycle flows:</strong> welcome, activation, engagement, monetization, retention.</li>
+            <li><strong>Personalization:</strong> behavioral triggers, dynamic content, and product recommendations.
+            </li>
+            <li><strong>Deliverability & measurement:</strong> domain warm-up, deliverability audits, cohort LTV
+              analysis.</li>
+          </ul>
+          <p style="margin-top:8px"><em>Value:</em> increased CLTV, lower churn, and predictable recurring revenue.</p>
+        </div>
+
+        <div class="marketing-card">
+          <h3>International Marketing — Localized GTM</h3>
+          <p class="muted">Global expansion requires more than translation — it needs localized positioning, payment
+            methods and channel strategies. I operationalize market entry and scale playbooks.</p>
+          <ul>
+            <li><strong>Localization:</strong> language, cultural cues, pricing, and UX tailored to the market.</li>
+            <li><strong>SEO localization:</strong> country-specific keyword research, hreflang, ccTLD strategy.</li>
+            <li><strong>Compliance & channels:</strong> privacy, ad rules, local platforms and payment preferences.</li>
+          </ul>
+          <p style="margin-top:8px"><em>Value:</em> faster market-product fit, reduced wasted spend, and higher
+            conversion in local markets.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div style="display:flex;align-items:center;gap:12px">
+        <h2>Content Marketing — systems & KPIs</h2>
+        <div class="muted">Quality that scales and converts</div>
+      </div>
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 360px;gap:18px">
+        <div class="card">
+          <h3>System approach</h3>
+          <p class="muted">Build a repeatable content engine: research, production, optimization, and distribution — all
+            tied to business outcomes (leads, trials, revenue).</p>
+          <h4 style="margin-top:12px">Playbook (executable)</h4>
+          <ol class="muted">
+            <li>Audit: identify top content, gaps, and conversion leakage.</li>
+            <li>Strategy: pick 1–2 pillar topics, map clusters and CTAs.</li>
+            <li>Production: templates + briefs, SEO meta, schema & editorial review.</li>
+            <li>Distribution: repurpose, test on social & paid, add to email nurture.</li>
+            <li>Measure: organic lift, assisted conversions, lead quality and CAC movement.</li>
+          </ol>
+          <h4 style="margin-top:12px">Formats prioritized by ROI</h4>
+          <p class="muted">Long-form research and case studies for acquisition; short-form video and social for
+            velocity; gated reports for lead quality.</p>
+        </div>
+
+        <aside class="card">
+          <h4>Quick Wins</h4>
+          <ul class="muted">
+            <li>Refresh top 5 posts with new data, CTAs and schema.</li>
+            <li>Publish 1 pillar + 4 cluster posts in 60 days and track ranking velocity.</li>
+            <li>Repurpose case study into 5 social assets and 1 webinar to capture mid-funnel leads.</li>
+            <li>Implement FAQ and Article schema on priority pages for SERP real estate.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div style="display:flex;align-items:center;gap:12px">
+        <h2>Contact</h2>
+        <div class="muted">Let's explore whether we're a fit</div>
+      </div>
+      <div style="margin-top:12px" class="card">
+        <p class="muted">Prefer a quick chat or email? You can reach me at:</p>
+        <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
+          <a href="mailto:noureddine.benmanser@gmail.com" class="primary btn"
+            id="mailto-link">noureddine.benmanser@gmail.com</a>
+          <button class="secondary btn" id="open-contact-popup">Contact me</button>
+
+        </div>
+
+      </div>
+
+      <!-- Popup -->
+      <div id="contact-popup" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1" style="display:none">
+        <div class="popup-backdrop" data-close="true"
+          style="position:fixed;inset:0;background:rgba(9,11,13,0.35);backdrop-filter:blur(4px);z-index:200"></div>
+        <div class="popup-card" role="document" aria-labelledby="popup-title"
+          style="position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--card);padding:22px;border-radius:12px;box-shadow:0 20px 50px rgba(17,24,39,0.08);z-index:220;max-width:520px;width:92%">
+          <button class="popup-close" aria-label="Close contact dialog"
+            style="position:absolute;right:12px;top:12px;border:0;background:transparent;font-size:18px;cursor:pointer">✕</button>
+          <h3 id="popup-title">Contact options</h3>
+          <p class="muted">Choose your preferred way to start a conversation.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+            <a href="mailto:noureddine.benmanser@gmail.com" class="primary btn" style="align-self:start">Email me</a>
+
+            <a href="https://www.linkedin.com/in/noureddine-benmanser-513534213/" class="secondary btn"
+              style="align-self:start">Message on LinkedIn</a>
+          </div>
+          <p class="muted" style="margin-top:12px;font-size:13px">Privacy note: messages are confidential and handled
+            personally.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div
+      style="max-width:var(--maxW);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px">
+      <div style="font-weight:700">Noureddine BENMANSER — Strategic Marketer</div>
+      <div class="muted">Trusted by startups & premium houses — measurable results.</div>
+    </div>
+  </footer>
+
+  <div id="mailto-toast" class="toast" role="status" aria-live="polite">Opening your mail app — thanks! ✨</div>
+
+  <script>
+    (function () {
+
+      const words = ['Traffic that converts.', 'Campaigns that scale.', 'Stories that sell.'];
+      let i = 0; const el = document.getElementById('kinetic-word');
+      const kineticWrap = document.querySelector('.kinetic');
+      function rotate() { i = (i + 1) % words.length; el.style.opacity = 0; setTimeout(() => { el.textContent = words[i]; el.style.opacity = 1; }, 140); }
+      setInterval(rotate, 3200);
+      requestAnimationFrame(() => setTimeout(() => kineticWrap.classList.add('animate'), 180));
+
+
+      const openBtn = document.getElementById('open-contact-popup');
+      const popup = document.getElementById('contact-popup');
+      if (openBtn && popup) {
+        const closeBtn = popup.querySelector('.popup-close');
+        const backdrop = popup.querySelector('.popup-backdrop');
+        let lastFocus = null;
+        function open() { lastFocus = document.activeElement; popup.style.display = 'block'; popup.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; closeBtn.focus(); }
+        function close() { popup.setAttribute('aria-hidden', 'true'); setTimeout(() => { popup.style.display = 'none'; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }, 220); }
+        openBtn.addEventListener('click', e => { e.preventDefault(); open(); });
+        closeBtn.addEventListener('click', e => { e.preventDefault(); close(); });
+        backdrop.addEventListener('click', close);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && popup.getAttribute('aria-hidden') === 'false') close(); });
+      }
+
+
+      const mailLink = document.getElementById('mailto-link');
+      const toast = document.getElementById('mailto-toast');
+      if (mailLink && toast) {
+        mailLink.addEventListener('click', () => {
+          toast.style.display = 'block'; toast.style.opacity = '0'; toast.style.transform = 'translateY(6px)';
+          setTimeout(() => { toast.style.opacity = '1'; toast.style.transform = 'translateY(0)'; }, 10);
+          setTimeout(() => { toast.style.opacity = '0'; toast.style.transform = 'translateY(6px)'; setTimeout(() => toast.style.display = 'none', 260); }, 2400);
+        });
+      }
+
+
+      document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function (e) { const href = this.getAttribute('href'); if (href.length > 1) { e.preventDefault(); const target = document.querySelector(href); if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Noureddine BENMANSER","jobTitle":"Strategic Marketer","url":"","sameAs":[]}
+  </script>
+</body>
+
+</html>
